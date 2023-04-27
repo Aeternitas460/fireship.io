@@ -6,7 +6,8 @@ export class UniversalPlayer {
     private ytPlayer;
     private listener;
     constructor(public video: string | number, public el: HTMLElement, public type: 'youtube' | 'vimeo') {}
-
+    
+    // Plays video based on type provided (Youtube or Vimeo)
     private async setupPlayer() {
         if (this.type === 'youtube') {
             const YouTubePlayer = (await import('youtube-player')).default;
